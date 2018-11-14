@@ -9,6 +9,8 @@
 
 const express = require(`express`);
 const hbs = require(`hbs`);
+
+const port = process.env.PORT || 3000;
 let app = express();
 
 hbs.registerHelper(`getCurrentYear`,()=>{
@@ -48,6 +50,6 @@ app.get(`/bad`,(req,res)=>{
         errorMessage:`unable to fulfill this request`
     });
 })
-app.listen(3000,()=>{
-    console.log(`Server is currently running port:3000...`);
+app.listen(port,()=>{
+    console.log(`Server is currently running port:${port}`);
 });
