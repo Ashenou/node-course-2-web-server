@@ -42,7 +42,15 @@ app.get(`/about`,(req,res)=>{
         pageTitle:`About`,
         currentYear: new Date().getFullYear()
     });
-})
+});
+
+app.get(`/portfolio`,(req,res)=>{
+
+    res.render(`portfolio.hbs`,{
+        pageTitle:`portfolio`,
+        welcomeMessage:`this is my portfolio`
+    })
+});
 
 app.get(`/bad`,(req,res)=>{
 
